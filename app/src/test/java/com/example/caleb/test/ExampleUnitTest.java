@@ -12,26 +12,26 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void validate() throws Exception{
-        assertTrue(!MainActivity.checkPassword("password"));
+        assertTrue(!MainActivity.checkPassword("passwordUp1"));
     }
 
     @Test
     public void checkLength() throws Exception{
-        assertTrue(MainActivity.checkPassword("12345678"));
+        assertTrue(!MainActivity.checkPassword("12345678Up!"));
     }
 
     @Test
     public void checkDigit() throws Exception{
-        assertTrue(MainActivity.checkPassword("12345678"));
+        assertTrue(!MainActivity.checkPassword("12345678Up!"));
     }
 
     @Test
     public void checkUpperandLower() throws Exception{
-        assertTrue(MainActivity.checkPassword("UPPLoopw"));
+        assertTrue(!MainActivity.checkPassword("UPPLoopw!"));
     }
 
     @Test
     public void checkSpecialchar() throws Exception{
-        assertTrue(MainActivity.checkPassword("UPPLoopw!"));
+        assertTrue(!MainActivity.checkPassword("UPPLoopw!"));
     }
 }
